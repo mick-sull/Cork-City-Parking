@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:textAlignment="center">
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_weight="0.75"
+        android:background="@drawable/chamfer_corners"
+        android:orientation="vertical"
+        android:weightSum="1">
+
+        <LinearLayout
+            android:id="@+id/layoutSelectCarpark"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="16dp"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+
+            <TextView
+                android:id="@+id/lblCarkpark"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="5px"
+                android:text="Carpark:"
+                android:textColor="@color/colorSub"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txtCarparkPC"
+                android:layout_width="208dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20px"
+                android:layout_weight="0.90"
+                android:textColor="@color/colorSub"
+                android:textStyle="bold" />
+
+            <ImageButton
+                android:id="@+id/ibParkingIconPC"
+                android:layout_width="wrap_content"
+                android:layout_height="24dp"
+                android:background="@android:drawable/screen_background_light_transparent"
+                android:elevation="0dp"
+                app:srcCompat="@drawable/ic_arrow_drop_down_black_24dp" />
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/view2"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="16dp"
+            android:background="@color/colordevider"
+            android:padding="16dp" />
+
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="16dp"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <TextView
+                android:id="@+id/lblNotifications"
+                android:layout_width="114dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.95"
+                android:gravity="center"
+                android:text="Receive notifications 15 mins prior to time exceeded"
+                android:textAlignment="viewStart"
+                android:textColor="@color/colorSub" />
+
+            <CheckBox
+                android:id="@+id/cbReceiveNotifiactions"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:backgroundTint="@color/colorGreyLight"
+                android:textColorLink="?attr/colorControlNormal"
+                app:buttonTint="@color/colorGrey" />
+
+
+        </LinearLayout>
+
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="16dp"
+            android:background="@color/colordevider"
+            android:padding="16dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="16dp"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <TextView
+                android:id="@+id/lblSettingDistance"
+                android:layout_width="114dp"
+                android:layout_height="wrap_content"
+                android:text="Predicted Stay"
+                android:textColor="@color/colorSub" />
+
+            <TextView
+                android:id="@+id/lblSettingHoursSelectedPC"
+                android:layout_width="114dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.74"
+                android:textAlignment="textEnd"
+                android:textColor="@color/grey_900"
+                tools:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="16dp"
+            android:orientation="horizontal">
+
+            <com.crystal.crystalrangeseekbar.widgets.CrystalSeekbar
+                android:id="@+id/rsHoursParkCar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:left_thumb_color="@color/colorSub"
+                app:max_value="24"
+                app:min_value="1" />
+
+            <View
+                android:id="@+id/view3"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="16dp"
+                android:background="@color/colordevider"
+                android:padding="16dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="16dp"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <TextView
+                android:id="@+id/lblSettingCost"
+                android:layout_width="114dp"
+                android:layout_height="wrap_content"
+                android:text="Cost"
+                android:textColor="@color/colorSub" />
+
+            <TextView
+                android:id="@+id/lblParkingCost"
+                android:layout_width="114dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.74"
+                android:textAlignment="textEnd"
+                android:textColor="@color/grey_900"
+                tools:textStyle="bold" />
+        </LinearLayout>
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="16dp"
+            android:background="@color/colordevider"
+            android:padding="16dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingTop="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/txtSettingsCancel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/chamfer_corners_light"
+                    android:cursorVisible="false"
+                    android:text="CANCEL"
+                    android:textAlignment="center"
+                    android:textSize="10sp" />
+
+                <TextView
+                    android:id="@+id/txtStartPC"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/chamfer_corners_light"
+                    android:cursorVisible="false"
+                    android:paddingBottom="10dp"
+                    android:text="START"
+                    android:textAlignment="center"
+                    android:textSize="10sp" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+        <!--        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="10dp">
+
+            <TextView
+                android:id="@+id/txtLogout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/chamfer_corners_light"
+                android:backgroundTint="@color/red_45"
+                android:cursorVisible="false"
+                android:paddingBottom="10dp"
+                android:text="LOGOUT"
+                android:textAlignment="center"
+                android:textColor="@android:color/white"
+                android:textSize="10sp"
+                android:textStyle="bold" />
+        </LinearLayout>-->
+
+    </LinearLayout>
+
+
+</LinearLayout>
+
